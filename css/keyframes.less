@@ -1,0 +1,185 @@
+.coin_bg
+{
+     > div
+    {
+        animation-name: coin_bg;
+        // animation-direction: alternate;
+        animation-play-state: running;
+        // animation-duration: 5s;
+        animation-timing-function: linear;
+        // animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .coin_bg_3
+    {
+        animation-duration: 15s * 2;
+    }
+    .coin_bg_2
+    {
+        animation-duration: 10s * 2;
+    }
+    .coin_bg_1
+    {
+        animation-duration: 5s * 2;
+    }
+}
+
+
+@keyframes coin_bg
+{
+    from
+    {
+        background-position: center 0%;
+        // transform: translate(0%,0%);
+    }
+    to
+    {
+        background-position: center 100%;
+        // transform: translate(0%,100%);
+    }
+}
+
+.game_title
+{	
+	@title_light_duration:2s;
+
+	.lighti_1,.lighti_2,.lighti_3{
+		animation-name: game_light;
+		animation-duration: @title_light_duration;
+		// animation-direction: alternate;
+		animation-play-state: running;
+		animation-timing-function: steps(3, end);
+		// animation-delay: 2s;
+		animation-iteration-count: infinite;
+	}
+    
+	
+	.lighti_1{
+		display: block;
+		opacity: 0;
+		animation-delay: @title_light_duration;
+	}
+	.lighti_2{
+		display: block;
+		opacity: 0;
+		animation-delay: @title_light_duration / 3;
+	}
+	.lighti_3{
+		display: block;
+		opacity: 0;
+		animation-delay: @title_light_duration / 3 * 2;
+	}
+
+}
+
+
+@keyframes game_light
+{
+    0%
+    {
+        opacity: 0;
+    }
+    33.3333%
+    {
+    	opacity: 1;
+    }
+    66.6666%
+    {
+    	opacity: 0;
+    }
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+
+.wheel_but_floor_light{
+		animation-name: wheel_but_floor_light;
+		animation-duration: 1s;
+		// animation-direction: alternate;
+		animation-play-state: running;
+		animation-timing-function: steps(5, end);
+		// animation-delay: 2s;
+		animation-iteration-count: infinite;
+}
+
+
+@keyframes wheel_but_floor_light {
+	from { transform: rotateZ(0deg); }
+	to { transform: rotateZ(40deg); }
+}
+
+
+
+@pedestal_light_duration: 1s;
+
+.pedestal{
+	.light_1,
+	.light_2,
+	.light_3{
+		animation-name: pedestal_light;
+		animation-duration: @pedestal_light_duration;
+		// animation-direction: alternate;
+		animation-play-state: running;
+		animation-timing-function: steps(3, end);
+		// animation-delay: 2s;
+		animation-iteration-count: infinite;
+	}
+	
+	.light_3{animation-delay: 0s}
+	.light_2{animation-delay: @pedestal_light_duration / 3}
+	.light_1{animation-delay: @pedestal_light_duration / 3 * 2}
+
+
+}
+
+@keyframes pedestal_light {
+	0% 
+	{ 
+		opacity: 1;
+	}
+
+	33.333%
+	{
+		opacity: .5;
+	}
+
+	100% 
+	{ 
+		opacity: 0;
+	}
+}
+
+
+.wheel_body{
+	animation-name: rotate;
+	animation-duration: 12s;
+	animation-timing-function: linear;
+	// animation-delay: 2s;
+	animation-iteration-count: infinite;
+	// animation-direction: alternate;
+	animation-play-state: paused;
+}
+
+.r{
+	animation-name: rotate_backward;
+	animation-duration: 13s;
+	animation-timing-function: linear;
+	// animation-delay: 2s;
+	animation-iteration-count: infinite;
+	// animation-direction: alternate;
+	animation-play-state: paused;
+}
+
+
+@keyframes rotate {
+	from { transform: rotateZ(0deg); }
+	to { transform: rotateZ(-360deg); }
+}
+
+@keyframes rotate_backward {
+	from { transform: rotateZ(0deg); }
+	to { transform: rotateZ(360deg); }
+}

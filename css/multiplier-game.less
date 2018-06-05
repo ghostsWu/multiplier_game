@@ -1,0 +1,393 @@
+// 玩家端/////////////
+
+.autoplay{}
+// 待机状态
+.waiting{}
+// 等待中
+.gaming{}
+// 游戏中
+.winning{}
+// 中奖状态
+
+// 工作人员端/////////////
+
+.standby{}
+// 待机状态
+.typing{}
+// 信息输入中
+.gaming{}
+// 游戏中
+.winning{}
+// 中奖状态
+
+
+
+
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.5;
+
+    overflow: hidden;
+}
+
+a:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+a:hover,a:active {
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,a:focus {
+    text-decoration: underline;
+}
+
+ul,ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul ul,ul ol,ol ol,ol ul {
+    margin-bottom: 0;
+}
+
+*
+{
+    box-sizing: border-box;
+    transform-origin: 50% 50%;
+}
+
+// * {
+//   backface-visibility: hidden;
+// }
+
+img
+{
+    width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic
+}
+
+body
+{
+    font-family: -apple-system,
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto,
+    "Helvetica Neue",
+    Helvetica, 
+    "PingFang SC", 
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    SimSun, 
+    sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    
+    color: #fff;
+
+    text-align: center;
+
+}
+
+body{
+    /* Rectangle: */
+    background-image: linear-gradient(-180deg, #6D123E 0%, #A71949 19%, #C91F51 50%, #C91F51 99%);
+
+    perspective: 500;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+
+    overflow: hidden;
+}
+
+
+.coin_bg{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    >div{
+        height: 200%;
+        width: 100%;
+
+        background-size:  auto 50% ; 
+        background-repeat: repeat;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    
+    .coin_bg_1{
+        background-image: url(../images/con-1.png);
+    }
+    .coin_bg_2{
+        background-image: url(../images/con-2.png);
+    }
+    .coin_bg_3{
+        background-image: url(../images/con-3.png);
+    }
+
+}
+
+.game_title{
+    width: 90%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    margin-left: 5%;
+    z-index: 2;
+
+
+    img{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    // .lighti_1{display: none;}
+    // .lighti_2{display: none;}
+    // .lighti_3{display: none;}
+}
+
+
+.wheel{
+    width: 120%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    z-index: 10;
+
+    margin-left: -10%;
+    margin-bottom: -40%;
+
+    // overflow: hidden;
+
+    transform-style: preserve-3d;
+
+
+    // transform: translate3d(0%,0%,0px) scale3d(1,1,1);
+    transform: translate3d(0%, -22%, 0px) scale3d(0.7, 0.7 , 1);
+    // transform: translate(0%, -22%) scale(0.65, 0.65);
+        
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: .1s;
+
+
+    .wheel_body{
+        width: 100%;
+        // transform-origin:50% 50%;
+
+        .wheel_body_light{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .wheel_border{
+        position: absolute;
+            left: 0;
+            top: 0;
+    }
+
+    .wheel_button{
+        width: 60%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        margin-left: 20%;
+        margin-top: 20%;
+
+        z-index: 99;
+
+
+        >div{
+            position: absolute;
+        }
+
+        .pointer{
+            width: 20%;
+            margin-left: 40%;
+            margin-top: -9%;
+        }
+    }
+    
+    .wheel_button_click{
+        transition-property: transform;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: .1s;
+
+        backface-visibility:hidden;
+
+        transform: rotateY(360deg * 2 + 180deg);
+    }
+    .wheel_button_sands{
+        transition-property: transform;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: .1s;
+
+        backface-visibility:hidden;
+    }
+
+
+    div{
+        // position: absolute;
+    }
+
+    img{
+        // position: absolute;
+    }
+}
+
+.pedestal{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3%;
+
+    z-index: 20;
+
+    .light_1,
+    .light_2,
+    .light_3{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+}
+
+.zoom_in{
+        width: 22%;
+        position: absolute;
+        left: 50%;
+        top: -4%;
+        margin-left: -11%;
+
+        z-index: 99;
+
+        display: none;
+
+    
+    .prize{
+        width: 60%;
+        height: 88%;
+        position: absolute;
+        left: 0%;
+        top: 6%;
+        background-color: #fff;
+        z-index: 9;
+        margin-left: 20%;
+        overflow: hidden;
+
+        // background-color: #fff;
+
+        z-index: 9;
+
+        background-image: url(../images/prize@2x.png);
+
+        background-size: auto 100%;
+        background-position: -4% 0%;
+        background-repeat: repeat-y;
+
+        transform: rotateX(-17deg);
+        transform-origin: 50% 0%;
+    }
+
+    .big-pointer{
+        position: relative;
+        z-index: 10;
+    }
+    
+}
+
+
+.wheel{
+    .click{
+        .wheel_button_click{
+           transform: rotateY(0deg);
+            
+        }
+        .wheel_button_sands{
+            
+            transform: rotateY(360deg * 2 + 180deg);
+        }
+    }
+
+}
+
+
+
+/////////////////////
+
+.autoplay{
+    .wheel{
+        transform: translate3d(0%,0%,0px) scale3d(1,1,1);
+
+        // transform: translate(0%, 0%) scale(1, 1);
+    }
+    
+    .wheel_body{
+        animation-duration: 8s;
+        animation-play-state: running;
+    }
+
+    .wheel_small_grid{
+        animation-duration: 6s;
+        animation-play-state: running;
+    }
+
+    .zoom_in{
+        display: block;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

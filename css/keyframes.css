@@ -1,0 +1,242 @@
+.coin_bg > div {
+  -webkit-animation-name: coin_bg;
+          animation-name: coin_bg;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.coin_bg .coin_bg_3 {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+}
+.coin_bg .coin_bg_2 {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+.coin_bg .coin_bg_1 {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+@-webkit-keyframes coin_bg {
+  from {
+    background-position: center 0%;
+  }
+  to {
+    background-position: center 100%;
+  }
+}
+@keyframes coin_bg {
+  from {
+    background-position: center 0%;
+  }
+  to {
+    background-position: center 100%;
+  }
+}
+.game_title .lighti_1,
+.game_title .lighti_2,
+.game_title .lighti_3 {
+  -webkit-animation-name: game_light;
+          animation-name: game_light;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: steps(3, end);
+          animation-timing-function: steps(3, end);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.game_title .lighti_1 {
+  display: block;
+  opacity: 0;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.game_title .lighti_2 {
+  display: block;
+  opacity: 0;
+  -webkit-animation-delay: 0.66666667s;
+          animation-delay: 0.66666667s;
+}
+.game_title .lighti_3 {
+  display: block;
+  opacity: 0;
+  -webkit-animation-delay: 1.33333333s;
+          animation-delay: 1.33333333s;
+}
+@-webkit-keyframes game_light {
+  0% {
+    opacity: 0;
+  }
+  33.3333% {
+    opacity: 1;
+  }
+  66.6666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes game_light {
+  0% {
+    opacity: 0;
+  }
+  33.3333% {
+    opacity: 1;
+  }
+  66.6666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.wheel_but_floor_light {
+  -webkit-animation-name: wheel_but_floor_light;
+          animation-name: wheel_but_floor_light;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: steps(5, end);
+          animation-timing-function: steps(5, end);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes wheel_but_floor_light {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(40deg);
+            transform: rotateZ(40deg);
+  }
+}
+@keyframes wheel_but_floor_light {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(40deg);
+            transform: rotateZ(40deg);
+  }
+}
+.pedestal .light_1,
+.pedestal .light_2,
+.pedestal .light_3 {
+  -webkit-animation-name: pedestal_light;
+          animation-name: pedestal_light;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: steps(3, end);
+          animation-timing-function: steps(3, end);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.pedestal .light_3 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.pedestal .light_2 {
+  -webkit-animation-delay: 0.33333333s;
+          animation-delay: 0.33333333s;
+}
+.pedestal .light_1 {
+  -webkit-animation-delay: 0.66666667s;
+          animation-delay: 0.66666667s;
+}
+@-webkit-keyframes pedestal_light {
+  0% {
+    opacity: 1;
+  }
+  33.333% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pedestal_light {
+  0% {
+    opacity: 1;
+  }
+  33.333% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.wheel_body {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.r {
+  -webkit-animation-name: rotate_backward;
+          animation-name: rotate_backward;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes rotate_backward {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate_backward {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,265 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  overflow: hidden;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+body {
+  /* Rectangle: */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6d123e), color-stop(19%, #a71949), color-stop(50%, #c91f51), color-stop(99%, #c91f51));
+  background-image: linear-gradient(-180deg, #6d123e 0%, #a71949 19%, #c91f51 50%, #c91f51 99%);
+  -webkit-perspective: 500;
+          perspective: 500;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  overflow: hidden;
+}
+.coin_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+.coin_bg > div {
+  height: 200%;
+  width: 100%;
+  background-size: auto 50% ;
+  background-repeat: repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.coin_bg .coin_bg_1 {
+  background-image: url(../images/con-1.png);
+}
+.coin_bg .coin_bg_2 {
+  background-image: url(../images/con-2.png);
+}
+.coin_bg .coin_bg_3 {
+  background-image: url(../images/con-3.png);
+}
+.game_title {
+  width: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-left: 5%;
+  z-index: 2;
+}
+.game_title img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wheel {
+  width: 120%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  margin-left: -10%;
+  margin-bottom: -40%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0%, -22%, 0px) scale3d(0.7, 0.7, 1);
+          transform: translate3d(0%, -22%, 0px) scale3d(0.7, 0.7, 1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+.wheel .wheel_body {
+  width: 100%;
+}
+.wheel .wheel_body .wheel_body_light {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wheel .wheel_border {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wheel .wheel_button {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 20%;
+  margin-top: 20%;
+  z-index: 99;
+}
+.wheel .wheel_button > div {
+  position: absolute;
+}
+.wheel .wheel_button .pointer {
+  width: 20%;
+  margin-left: 40%;
+  margin-top: -9%;
+}
+.wheel .wheel_button_click {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(900deg);
+          transform: rotateY(900deg);
+}
+.wheel .wheel_button_sands {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.pedestal {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -3%;
+  z-index: 20;
+}
+.pedestal .light_1,
+.pedestal .light_2,
+.pedestal .light_3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.zoom_in {
+  width: 22%;
+  position: absolute;
+  left: 50%;
+  top: -4%;
+  margin-left: -11%;
+  z-index: 99;
+  display: none;
+}
+.zoom_in .prize {
+  width: 60%;
+  height: 88%;
+  position: absolute;
+  left: 0%;
+  top: 6%;
+  background-color: #fff;
+  margin-left: 20%;
+  overflow: hidden;
+  z-index: 9;
+  background-image: url(../images/prize@2x.png);
+  background-size: auto 100%;
+  background-position: -4% 0%;
+  background-repeat: repeat-y;
+  -webkit-transform: rotateX(-17deg);
+          transform: rotateX(-17deg);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+}
+.zoom_in .big-pointer {
+  position: relative;
+  z-index: 10;
+}
+.wheel .click .wheel_button_click {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.wheel .click .wheel_button_sands {
+  -webkit-transform: rotateY(900deg);
+          transform: rotateY(900deg);
+}
+.autoplay .wheel {
+  -webkit-transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1);
+          transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1);
+}
+.autoplay .wheel_body {
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.autoplay .wheel_small_grid {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.autoplay .zoom_in {
+  display: block;
+}
